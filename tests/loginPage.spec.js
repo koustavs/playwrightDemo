@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import * as allure from "allure-js-commons";
 import { Severity } from "allure-js-commons";
 const Evidence = require('../utils/common');
-import { setupPageCrashListener } from '../utils/common';
+const { setupPageCrashListener } = require('../utils/common');
 const { PaymentPage } = require('../pages/PaymentPage');
 const { PageObjectManager } = require('../pages/PageObjectManager');
 const loginData = require("../testData/login.json");

@@ -4,7 +4,7 @@ import { Severity } from "allure-js-commons";
 const loginData = require("../testData/login.json");
 const registrationData = require("../testData/registration.json");
 const Evidence = require('../utils/common');
-import { setupPageCrashListener } from '../utils/common';
+const { setupPageCrashListener } = require('../utils/common');
 const { PageObjectManager } = require('../pages/PageObjectManager');
 
 

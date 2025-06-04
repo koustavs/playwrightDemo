@@ -3,7 +3,7 @@ const { PageObjectManager } = require('../pages/PageObjectManager');
 import * as allure from "allure-js-commons";
 import { Severity } from "allure-js-commons";
 const Evidence = require('../utils/common');
-import { setupPageCrashListener } from '../utils/common';
+const { setupPageCrashListener } = require('../utils/common');
 const report = new Evidence();
 
 test.describe('Contact Us', () => {

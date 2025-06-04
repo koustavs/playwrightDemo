@@ -5,7 +5,7 @@ const { PageObjectManager } = require('../pages/PageObjectManager');
 const loginData = require("../testData/login.json");
 const productData = require("../testData/products.json");
 const Evidence = require('../utils/common');
-import { setupPageCrashListener } from '../utils/common';
+const { setupPageCrashListener } = require('../utils/common');
 // const authFile="config/auth.json"
 const report = new Evidence();
 
