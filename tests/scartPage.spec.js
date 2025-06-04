@@ -5,12 +5,13 @@ const { PageObjectManager } = require('../pages/PageObjectManager');
 const loginData = require("../testData/login.json");
 const productData = require("../testData/products.json");
 const Evidence = require('../utils/common');
+import { setupPageCrashListener } from '../utils/common';
 const report = new Evidence();
 
 
 test.describe('Cart Operations', () => {
     test('Test - Validate Cart Item Removal', { tag: '@Smoke' }, async ({ page },testInfo) => {
-
+setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Cart Item Removal");
@@ -41,7 +42,7 @@ test.describe('Cart Operations', () => {
     });
 
     test('Test - Verify Proceed to checkout flow for Logged-in User', { tag: '@Regression' }, async ({ page },testInfo) => {
-
+setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify checkout flow for Logged-in User");

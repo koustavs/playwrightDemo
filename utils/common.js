@@ -226,6 +226,14 @@ try{
       }*/
       
 
+        async setupPageCrashListener(page) {
+  page.on('crash', () => {
+    console.error('💥 Page crashed!');
+    // Optional: Take recovery steps or save debug info
+  });
+}
+
+
 }
 
 

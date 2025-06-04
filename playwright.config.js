@@ -62,7 +62,17 @@ export default defineConfig({
     // storageState:'config/auth.json',
     screenshot:'on',
     launchOptions: {
-      args: ["--start-maximized"],
+      args: [
+        "--start-maximized",
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+        '--disable-gpu',
+        '--disable-software-rasterizer',
+        '--disable-setuid-sandbox',
+        '--no-zygote',
+        '--single-process',
+        '--disable-dev-tools'
+      ],
       // slowMo:190
     },
   },

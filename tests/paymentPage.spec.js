@@ -5,12 +5,13 @@ const { PageObjectManager } = require('../pages/PageObjectManager');
 const loginData = require("../testData/login.json");
 const productData = require("../testData/products.json");
 const Evidence = require('../utils/common');
+import { setupPageCrashListener } from '../utils/common';
 const report = new Evidence();
 
 
 test.describe('Payments', () => {
     test('Test - Verify Place order flow', { tag: '@Regression' }, async ({ page },testInfo) => {
-
+setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Place order flow");

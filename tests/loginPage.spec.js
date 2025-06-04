@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 import * as allure from "allure-js-commons";
 import { Severity } from "allure-js-commons";
 const Evidence = require('../utils/common');
+import { setupPageCrashListener } from '../utils/common';
 const { PaymentPage } = require('../pages/PaymentPage');
 const { PageObjectManager } = require('../pages/PageObjectManager');
 const loginData = require("../testData/login.json");
@@ -10,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Login Module', () => {
     test('Test - Unsuccessful Login - Automation Exercise.com', { tag: '@Regression' }, async ({ page }, testInfo) => {
-
+        setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Unsuccessful Login");
@@ -25,15 +26,15 @@ test.describe('Login Module', () => {
         await PgObjManager.Login.invalidLogin(loginData.email, loginData.invalidPassword);
         await PgObjManager.Login.verifyInvalidLoginError();
         await report.captureScreenshot(page, 'Error message displayed');
-        await test.step('Create PDF report file',async()=>{
-            await report.createPDF(report.generateFileName(testInfo),testInfo);
+        await test.step('Create PDF report file', async () => {
+            await report.createPDF(report.generateFileName(testInfo), testInfo);
         });
 
     });//report
 
 
     test('Test - Successful Login - Automation Exercise.com', { tag: '@Regression' }, async ({ page }, testInfo) => {
-
+        setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Successful Login");
@@ -55,14 +56,14 @@ test.describe('Login Module', () => {
         await PgObjManager.Home.clickLogoutLink();
         await report.captureScreenshot(page, 'Logged Out successfully');
         // await report.captureScreenshot(page,'');
-        await test.step('Create PDF report file',async()=>{
-            await report.createPDF(report.generateFileName(testInfo),testInfo);
+        await test.step('Create PDF report file', async () => {
+            await report.createPDF(report.generateFileName(testInfo), testInfo);
         });
 
     });
 
     test('Test - Verify Login before Checkout', { tag: '@Smoke' }, async ({ page }, testInfo) => {
-
+        setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify product search(User not Logged-in)");
@@ -117,8 +118,8 @@ test.describe('Login Module', () => {
         await PgObjManager.Home.verifySuccessfulLogin();
         await PgObjManager.Home.clickLogoutLink();
         await report.captureScreenshot(page, 'Logged out');
-        await test.step('Create PDF report file',async()=>{
-            await report.createPDF(report.generateFileName(testInfo),testInfo);
+        await test.step('Create PDF report file', async () => {
+            await report.createPDF(report.generateFileName(testInfo), testInfo);
         });
 
     });
