@@ -1,0 +1,29 @@
+{
+  "name": "pwpomdemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "smoke": "playwright test --grep \"@Smoke\"",
+    "regression": "playwright test --grep \"@Regression\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.13",
+    "allure-playwright": "^3.2.1",
+    "archiver": "^7.0.1",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.3.0",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.51.1"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.48",
+    "winston": "^3.17.0"
+  }
+}

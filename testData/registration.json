@@ -1,0 +1,38 @@
+[
+    {
+        "name" : "Koustav Saha",
+        "email" : "a@c.in",
+        "title" : "mr.",
+        "password" : "a@c.in",
+        "day" : "1",
+        "month" : "1",
+        "year" : "1990",
+        "firstName" : "Koustav",
+        "lastName" : "Saha",
+        "company":"GPC",
+        "addrLn1" : "Kondapur",
+        "addrLn2" : "Masjidbanda",
+        "state" : "Telangana",
+        "city" : "Hyderabad",
+        "zipcode" : "500084",
+        "mobile" : "9876543210"
+    },
+    {
+        "name" : "Koustav Saha",
+        "email" : "a@d.in",
+        "title" : "mr.",
+        "password" : "a@d.in",
+        "day" : "1",
+        "month" : "1",
+        "year" : "1991",
+        "firstName" : "Koustav",
+        "lastName" : "Saha",
+        "company":"GPC",
+        "addrLn1" : "Kondapur",
+        "addrLn2" : "Masjidbanda",
+        "state" : "Telangana",
+        "city" : "Hyderabad",
+        "zipcode" : "500080",
+        "mobile" : "9876543210"
+    }
+]
