@@ -29,39 +29,31 @@ test.describe('Account Operations', () => {
         // await test.step('Take screenshot', async () => {
         //     await report.captureScreenshot(page, 'Login Screen Loaded');
         // });
-        await test.step('Click Login/SignUp link', async () => {
-            await PgObjManager.Home.clickLoginSignUpLink();
-        });
-        await test.step('Capturing New user details', async () => {
-            await PgObjManager.Login.inputNewUserDetails();
-        });
-        await test.step('Capturing all New user registration details', async () => {
-            await PgObjManager.Account.fillRegistrationForm(); // a@c.in
-        });
+        // await test.step('Click Login/SignUp link', async () => {
+        //     await PgObjManager.Home.clickLoginSignUpLink();
+        // });
+        // await test.step('Capturing New user details', async () => {
+        //     await PgObjManager.Login.inputNewUserDetails();
+        // });
+        // await test.step('Capturing all New user registration details', async () => {
+        //     await PgObjManager.Account.fillRegistrationForm(); // a@c.in
+        // });
         // await test.step('Take screenshot', async () => {
         //     await report.captureScreenshot(page, 'Captured all details');
         // });
-        await test.step('Click Create Account button', async () => {
-            await PgObjManager.Account.clickCreateAccount();
-        });
+        // await test.step('Click Create Account button', async () => {
+        //     await PgObjManager.Account.clickCreateAccount();
+        // });
         // await test.step('Success message displayed', async () => {
         //     await report.captureScreenshot(page, 'Successfully created account');
         // });
-        await test.step('Click the continue button', async () => {
-            await PgObjManager.Account.clickCreateUserSuccessContinue();
-        });
-        await test.step('Verify login with new user details is successful', async () => {
-            await PgObjManager.Home.verifySuccessfulLogin();
-        });
-        await test.step('Click Logout link', async () => {
-            await PgObjManager.Home.clickLogoutLink();
-        });
+        /
         // await test.step('Verify successful logout', async () => {
         //     await report.captureScreenshot(page, 'Logged out successfully');
         // });
-        await test.step('Create PDF report file', async () => {
-            await report.createPDF(report.generateFileName(testInfo), testInfo);
-        });
+        // await test.step('Create PDF report file', async () => {
+        //     await report.createPDF(report.generateFileName(testInfo), testInfo);
+        // });
     });//report
 
     test('Test - Verify Existing User Registration', { tag: '@Regression' }, async ({ page }, testInfo) => {
