@@ -10,8 +10,8 @@ let invoiceTotalFromFile = 0;
 
 
 test.describe('Account Operations', () => {
-    test('Test - Verify New User Registration', { tag: ['@Regression', '@WebApp'] }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+    test.only('Test - Verify New User Registration', { tag: ['@Regression', '@WebApp'] }, async ({ page }, testInfo) => {
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const report = new Evidence();
 
@@ -65,7 +65,7 @@ test.describe('Account Operations', () => {
     });//report
 
     test('Test - Verify Existing User Registration', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const report = new Evidence();
 
@@ -105,7 +105,7 @@ test.describe('Account Operations', () => {
     });
 
     test('Test - Verify Registration flow before Checkout', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const report = new Evidence();
 

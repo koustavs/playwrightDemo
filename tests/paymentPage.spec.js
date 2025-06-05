@@ -11,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Payments', () => {
     test('Test - Verify Place order flow', { tag: '@Regression' }, async ({ page },testInfo) => {
-setupPageCrashListener(page);
+// setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Place order flow");

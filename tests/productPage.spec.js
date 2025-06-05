@@ -11,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Product page > Search Product', () => {
     test('Test - Verify product search(User not Logged-in)', { tag: '@Smoke' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify product search(User not Logged-in)");
@@ -36,7 +36,7 @@ test.describe('Product page > Search Product', () => {
 
 
     test('Test - Verify product search(User Logged-in)', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify product search(User Logged-in)");
@@ -71,7 +71,7 @@ test.describe('Product page > Search Product', () => {
 
 test.describe('Product page > Add Product to Cart', () => {
     test('Test - Verify add product to cart(User Logged-in)', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify add product to cart(User Logged-in)");
@@ -113,7 +113,7 @@ test.describe('Product page > Add Product to Cart', () => {
 
 
     test('Test - Validate Cart Total', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Cart Total");

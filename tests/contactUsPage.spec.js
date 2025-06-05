@@ -8,7 +8,7 @@ const report = new Evidence();
 
 test.describe('Contact Us', () => {
     test('Test - Verify Contact Form flow', { tag: '@Smoke' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Home page category/brand names");

@@ -11,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Cart Operations', () => {
     test('Test - Validate Cart Item Removal', { tag: '@Smoke' }, async ({ page },testInfo) => {
-setupPageCrashListener(page);
+// setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Cart Item Removal");
@@ -42,7 +42,7 @@ setupPageCrashListener(page);
     });
 
     test('Test - Verify Proceed to checkout flow for Logged-in User', { tag: '@Regression' }, async ({ page },testInfo) => {
-setupPageCrashListener(page);
+// setupPageCrashListener(page);
         const PgObjManager=new PageObjectManager(page);
 
         await allure.displayName("Test - Verify checkout flow for Logged-in User");

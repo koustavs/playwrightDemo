@@ -11,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Checkout', () => {
     test('Test - Verify Checkout page', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Checkout page");

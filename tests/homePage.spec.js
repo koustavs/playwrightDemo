@@ -10,7 +10,7 @@ const { PageObjectManager } = require('../pages/PageObjectManager');
 
 test.describe('Home Page Landing > Brand/Category Checking', () => {
     test('Test - Verify Home page category & brand names display for user not logged-in', { tag: '@Smoke' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const Login = PgObjManager.getLoginPage();
         const Home = PgObjManager.getHomePage();
@@ -35,7 +35,7 @@ test.describe('Home Page Landing > Brand/Category Checking', () => {
 
 
     test('Test - Verify Home page Category & Brand names display for logged-in user', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const Login = PgObjManager.getLoginPage();
         const Home = PgObjManager.getHomePage();
@@ -62,7 +62,7 @@ test.describe('Home Page Landing > Brand/Category Checking', () => {
 test.describe('Account Deletion Flow', () => {
     for (const reg of registrationData) {
         test(`Test - Verify successful account deletion of ${reg.email}`, { tag: '@Regression' }, async ({ page }, testInfo) => {
-            setupPageCrashListener(page);
+            // setupPageCrashListener(page);
             const PgObjManager = new PageObjectManager(page);
             const Login = PgObjManager.getLoginPage();
             const Home = PgObjManager.getHomePage();

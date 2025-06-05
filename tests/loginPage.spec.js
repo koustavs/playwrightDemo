@@ -34,7 +34,7 @@ test.describe('Login Module', () => {
 
 
     test('Test - Successful Login - Automation Exercise.com', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Successful Login");
@@ -63,7 +63,7 @@ test.describe('Login Module', () => {
     });
 
     test('Test - Verify Login before Checkout', { tag: '@Smoke' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify product search(User not Logged-in)");
