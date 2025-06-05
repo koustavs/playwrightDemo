@@ -47,7 +47,7 @@ test.describe('Account Operations', () => {
         // await test.step('Success message displayed', async () => {
         //     await report.captureScreenshot(page, 'Successfully created account');
         // });
-        /
+        
         // await test.step('Verify successful logout', async () => {
         //     await report.captureScreenshot(page, 'Logged out successfully');
         // });
