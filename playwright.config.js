@@ -60,7 +60,7 @@ export default defineConfig({
     video:'off',
     headless: isCI,
     // storageState:'config/auth.json',
-    screenshot:'on',
+    screenshot:'off',
     launchOptions: {
       args: [
         "--start-maximized",
