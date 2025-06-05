@@ -29,21 +29,21 @@ test.describe('Account Operations', () => {
         // await test.step('Take screenshot', async () => {
         //     await report.captureScreenshot(page, 'Login Screen Loaded');
         // });
-        // await test.step('Click Login/SignUp link', async () => {
-        //     await PgObjManager.Home.clickLoginSignUpLink();
-        // });
-        // await test.step('Capturing New user details', async () => {
-        //     await PgObjManager.Login.inputNewUserDetails();
-        // });
-        // await test.step('Capturing all New user registration details', async () => {
-        //     await PgObjManager.Account.fillRegistrationForm(); // a@c.in
-        // });
+        await test.step('Click Login/SignUp link', async () => {
+            await PgObjManager.Home.clickLoginSignUpLink();
+        });
+        await test.step('Capturing New user details', async () => {
+            await PgObjManager.Login.inputNewUserDetails();
+        });
+        await test.step('Capturing all New user registration details', async () => {
+            await PgObjManager.Account.fillRegistrationForm(); // a@c.in
+        });
         // await test.step('Take screenshot', async () => {
         //     await report.captureScreenshot(page, 'Captured all details');
         // });
-        // await test.step('Click Create Account button', async () => {
-        //     await PgObjManager.Account.clickCreateAccount();
-        // });
+        await test.step('Click Create Account button', async () => {
+            await PgObjManager.Account.clickCreateAccount();
+        });
         // await test.step('Success message displayed', async () => {
         //     await report.captureScreenshot(page, 'Successfully created account');
         // });
@@ -72,27 +72,27 @@ test.describe('Account Operations', () => {
         await test.step('Verify the page title', async () => {
             await PgObjManager.Home.verifyTitle();
         });
-        await test.step('Take screenshot', async () => {
-            await report.captureScreenshot(page, 'Login Screen Loaded');
-        });
+        // await test.step('Take screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Login Screen Loaded');
+        // });
         await test.step('Click Login/SignUp link', async () => {
             await PgObjManager.Home.clickLoginSignUpLink();
         });
         await test.step('Capturing New user details', async () => {
             await PgObjManager.Login.inputNewUserDetails(); // a@c.in
         });
-        await test.step('Take screenshot', async () => {
-            await report.captureScreenshot(page, 'Captured already existing user details');
-        });
+        // await test.step('Take screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Captured already existing user details');
+        // });
         await test.step('verify the error message', async () => {
             await PgObjManager.Login.verifyAlreadyExistsUserMessage();
         });
-        await test.step('Take screenshot', async () => {
-            await report.captureScreenshot(page, 'Error message displayed');
-        });
-        await test.step('Create PDF report file', async () => {
-            await report.createPDF(report.generateFileName(testInfo), testInfo);
-        });
+        // await test.step('Take screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Error message displayed');
+        // });
+        // await test.step('Create PDF report file', async () => {
+        //     await report.createPDF(report.generateFileName(testInfo), testInfo);
+        // });
 
     });
 
@@ -112,9 +112,9 @@ test.describe('Account Operations', () => {
         await test.step('Verify the page title', async () => {
             await PgObjManager.Home.verifyTitle();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Login Screen Loaded');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Login Screen Loaded');
+        // });
         await test.step('Click Products link', async () => {
             await PgObjManager.Home.clickProductsLink();
         });
@@ -127,33 +127,33 @@ test.describe('Account Operations', () => {
         await test.step('Scroll page', async () => {
             await PgObjManager.Home.scrollPageVerticallyBy(200);
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Searched for product');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Searched for product');
+        // });
         await test.step('Verify product count', async () => {
             expect(count).toBe(Number(productData.tshirtCount));
         });
         await test.step('Add product to Cart', async () => {
             await PgObjManager.Product.addProductToCart();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Clicked Add to Cart');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Clicked Add to Cart');
+        // });
         await test.step('Click Cart link', async () => {
             await PgObjManager.Home.clickCartLink();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Cart page loaded');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Cart page loaded');
+        // });
         await test.step('Verify Checkout button', async () => {
             await PgObjManager.Cart.verifyProceedToCheckoutButton();
         });
         await test.step('Click Proceed to Checkout', async () => {
             await PgObjManager.Cart.clickProceedToCheckout();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Login popup displayed');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Login popup displayed');
+        // });
         await test.step('Verify login popup is displayed', async () => {
             await PgObjManager.Cart.verifyRegisterLoginPopupLink();
         });
@@ -166,24 +166,24 @@ test.describe('Account Operations', () => {
         await test.step('Capturing all New user registration details', async () => {
             await PgObjManager.Account.fillRegistrationFormWhileCheckout();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Captured user details');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Captured user details');
+        // });
         await test.step('Click Create Account', async () => {
             await PgObjManager.Account.clickCreateAccount();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Successfully created account');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Successfully created account');
+        // });
         await test.step('Click Continue after User creation', async () => {
             await PgObjManager.Account.clickCreateUserSuccessContinue();
         });
         await test.step('Verify successful login - Home screen', async () => {
             await PgObjManager.Home.verifySuccessfulLogin();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Logged in successfully');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Logged in successfully');
+        // });
         await test.step('Click Cart option', async () => {
             await PgObjManager.Home.clickCartLink();
         });
@@ -193,9 +193,9 @@ test.describe('Account Operations', () => {
         await test.step('Click Proceed to Checkout', async () => {
             await PgObjManager.Cart.clickProceedToCheckout();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Checkout page');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Checkout page');
+        // });
         await test.step('Verify Cart total', async () => {
             const invoiceTotalFromCart = await PgObjManager.Cart.verifyCartTotal();
         });
@@ -208,9 +208,9 @@ test.describe('Account Operations', () => {
         await test.step('Enter order comments', async () => {
             await PgObjManager.Checkout.enterOrderComment();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Comments entered');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Comments entered');
+        // });
         await test.step('Click Place Order', async () => {
             await PgObjManager.Checkout.clickPlaceOrder();
         });
@@ -220,9 +220,9 @@ test.describe('Account Operations', () => {
         await test.step('Capture card details', async () => {
             await PgObjManager.Payment.enterCardDetails();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Captured payment details', [PgObjManager.Payment.cardNumber_textBox, PgObjManager.Payment.cardCVC_textBox, PgObjManager.Payment.cardExpiryMonth_textBox]);
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Captured payment details', [PgObjManager.Payment.cardNumber_textBox, PgObjManager.Payment.cardCVC_textBox, PgObjManager.Payment.cardExpiryMonth_textBox]);
+        // });
         await test.step('Click Pay & Confirm Order', async () => {
             await PgObjManager.Payment.clickPayAndConfirmOrder();
         });
@@ -232,9 +232,9 @@ test.describe('Account Operations', () => {
         await test.step('Download Invoice', async () => {
             invoiceTotalFromFile = await PgObjManager.Order.clickDownloadInvoiceButton();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Invoice Downloaded');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Invoice Downloaded');
+        // });
         // await expect(invoiceTotalFromCart,"Amount Should match").toBe(invoiceTotalFromFile);
         await test.step('Verifying Checkout Amount with Invoice Amount', async () => {
             expect(invoiceTotalFromCheckout, "Amount Should match").toBe(invoiceTotalFromFile);
@@ -242,21 +242,21 @@ test.describe('Account Operations', () => {
         await test.step('Click Continue button', async () => {
             await PgObjManager.Order.clickContinueButton();
         });
-        await test.step('Take Screenshot', async () => {
-            await report.captureScreenshot(page, 'Redirect to Home page');
-        });
+        // await test.step('Take Screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Redirect to Home page');
+        // });
         await test.step('Verify Successful Login', async () => {
             await PgObjManager.Home.verifySuccessfulLogin();
         });
         await test.step('Click Logout', async () => {
             await PgObjManager.Home.clickLogoutLink();
         });
-        await test.step('Take screenshot', async () => {
-            await report.captureScreenshot(page, 'Error message displayed');
-        });
-        await test.step('Create PDF report file', async () => {
-            await report.createPDF(report.generateFileName(testInfo), testInfo);
-        });
+        // await test.step('Take screenshot', async () => {
+        //     await report.captureScreenshot(page, 'Error message displayed');
+        // });
+        // await test.step('Create PDF report file', async () => {
+        //     await report.createPDF(report.generateFileName(testInfo), testInfo);
+        // });
 
     });
 });
