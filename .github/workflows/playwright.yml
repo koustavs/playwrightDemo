@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 40
     runs-on: ubuntu-latest
     env:
-      EXE_ENV: production
+      EXE_ENV: qa
 
     steps:
       - uses: actions/checkout@v4
