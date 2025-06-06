@@ -10,10 +10,12 @@ const isCI = !!process.env.CI;
  */
 if(!process.env.EXE_ENV){
   require('dotenv').config({path:'./config/.env'});
+  console.log(`./config/.env`);
 }else{
   require('dotenv').config({ path: `./config/.env.${process.env.EXE_ENV}` });
+  console.log(`./config/.env.${process.env.EXE_ENV}`);
 }
-
+console.log(`Running tests with environment: ${process.env.EXE_ENV || 'default'}`);
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -30,7 +32,7 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   // forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 1 : 2,
+  retries: process.env.CI ? undefined : 2,
   /* Opt out of parallel tests on CI. */
   // workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
