@@ -45,3 +45,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./playwright-report
+      - name: Add Playwright Report Link to Summary
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: echo "🔗 [View Playwright Report](https://koustavs.github.io/playwrightDemo/)" >> $GITHUB_STEP_SUMMARY

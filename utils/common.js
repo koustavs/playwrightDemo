@@ -93,6 +93,7 @@ class common {
     }
 
     async createPDF(pdfFilename = 'test_evidence.pdf',testInfo=null) {
+        if(process.env.CI){return;}
         const pdfDoc = await PDFDocument.create();
         const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
         const fontSize = 12;
