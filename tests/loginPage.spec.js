@@ -11,7 +11,7 @@ const report = new Evidence();
 
 test.describe('Login Module', () => {
     test('Test - Unsuccessful Login - Automation Exercise.com', { tag: '@Regression' }, async ({ page }, testInfo) => {
-        setupPageCrashListener(page);
+        // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
 
         await allure.displayName("Test - Verify Unsuccessful Login");
