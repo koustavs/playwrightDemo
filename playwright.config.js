@@ -15,7 +15,7 @@ if(!process.env.EXE_ENV){
   require('dotenv').config({ path: `./config/.env.${process.env.EXE_ENV}` });
   console.log(`./config/.env.${process.env.EXE_ENV}`);
 }
-console.log(`Running tests with environment: ${process.env.EXE_ENV || 'default'}`);
+console.log(`Running tests with environment: ${process.env.EXE_ENV || 'default'}\nheadless: ${isCI ? 'true' : 'false'}`);
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -66,14 +66,14 @@ export default defineConfig({
     launchOptions: {
       args: [
         "--start-maximized",
-        '--disable-dev-shm-usage',
+        /*'--disable-dev-shm-usage',
         '--no-sandbox',
         '--disable-gpu',
         '--disable-software-rasterizer',
         '--disable-setuid-sandbox',
         '--no-zygote',
         '--single-process',
-        '--disable-dev-tools'
+        '--disable-dev-tools'*/
       ],
       // slowMo:190
     },

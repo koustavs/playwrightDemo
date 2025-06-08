@@ -47,7 +47,15 @@ test.describe('Account Operations', () => {
         await test.step('Success message displayed', async () => {
             await report.captureScreenshot(page, 'Successfully created account');
         });
-        
+        await test.step('Click the continue button',async()=>{
+            await PgObjManager.Account.clickCreateUserSuccessContinue();
+        });
+        await test.step('Verify login with new user details is successful',async()=>{
+            await PgObjManager.Home.verifySuccessfulLogin();
+        });
+        await test.step('Click Logout link',async()=>{
+            await PgObjManager.Home.clickLogoutLink();
+        });
         await test.step('Verify successful logout', async () => {
             await report.captureScreenshot(page, 'Logged out successfully');
         });

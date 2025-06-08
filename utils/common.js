@@ -70,8 +70,8 @@ class common {
 
         const filename = `${timestamp}-${customDescription.replace(/\s+/g, '_')}.png`;
         const filepath = path.join(this.evidenceDir, filename);
-        await page.screenshot({ path: filepath, fullPage: false });
-        let screenshotOptions = { path: filepath, fullPage: false, maskColor: '#b6ff00' };
+        await page.screenshot({ path: filepath, fullPage: true });
+        let screenshotOptions = { path: filepath, fullPage: true, maskColor: '#b6ff00' };
 
         if (maskLocator) {
             // Playwright allows array of locators or a single one

@@ -13,7 +13,8 @@ exports.HomePage = class HomePage {
         this.products_link = page.locator("//a[contains(normalize-space(),'Products')]");
         //await page.locator('button:text("Button Text Here")').click();
         this.cart_link = page.locator("//a[normalize-space()='Cart']");
-        this.loginSignUp_link = page.locator("//a[normalize-space()='Signup / Login']")
+        // this.loginSignUp_link = page.locator("//a[normalize-space()='Signup / Login']");
+        this.loginSignUp_link = page.getByRole('link', { name: 'Signup / Login' });
         this.contactUs_link = page.locator("//a[normalize-space()='Contact us']");
         this.logout_link = page.locator("//a[normalize-space()='Logout']");
         this.deleteAccount_link = page.locator("//a[normalize-space()='Delete Account']");
