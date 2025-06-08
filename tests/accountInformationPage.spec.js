@@ -47,13 +47,13 @@ test.describe('Account Operations', () => {
         await test.step('Success message displayed', async () => {
             await report.captureScreenshot(page, 'Successfully created account');
         });
-        await test.step('Click the continue button',async()=>{
+        await test.step('Click the continue button', async () => {
             await PgObjManager.Account.clickCreateUserSuccessContinue();
         });
-        await test.step('Verify login with new user details is successful',async()=>{
+        await test.step('Verify login with new user details is successful', async () => {
             await PgObjManager.Home.verifySuccessfulLogin();
         });
-        await test.step('Click Logout link',async()=>{
+        await test.step('Click Logout link', async () => {
             await PgObjManager.Home.clickLogoutLink();
         });
         await test.step('Verify successful logout', async () => {
@@ -61,8 +61,8 @@ test.describe('Account Operations', () => {
         });
         await test.step('Create PDF report file', async () => {
             await report.createPDF(report.generateFileName(testInfo), testInfo);
-        
-    });//report
+        });//report
+    });
 
     test('Test - Verify Existing User Registration', { tag: '@Regression' }, async ({ page }, testInfo) => {
         // setupPageCrashListener(page);
