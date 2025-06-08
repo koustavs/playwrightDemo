@@ -64,7 +64,7 @@ class common {
     }
 
     async captureScreenshot(page, customDescription, maskLocator = null) {
-        if(isCI){return;}
+        if(process.env.CI){return;}
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
         const title = await page.title();
         const url = page.url();
