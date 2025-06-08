@@ -10,7 +10,7 @@ let invoiceTotalFromFile = 0;
 
 
 test.describe('Account Operations', () => {
-    test.only('Test - Verify New User Registration', { tag: ['@Regression', '@WebApp'] }, async ({ page }, testInfo) => {
+    test('Test - Verify New User Registration', { tag: ['@Regression', '@WebApp'] }, async ({ page }, testInfo) => {
         // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);
         const report = new Evidence();
