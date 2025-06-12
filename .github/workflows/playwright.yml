@@ -10,7 +10,7 @@ on:
 jobs:
   test-all:
     timeout-minutes: 40
-    runs-on: mac-latest
+    runs-on: macos-latest
     env:
       EXE_ENV: qa
 
