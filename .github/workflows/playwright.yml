@@ -10,7 +10,7 @@ on:
 jobs:
   test-all:
     timeout-minutes: 40
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       EXE_ENV: qa
 
