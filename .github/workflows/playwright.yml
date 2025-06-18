@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Automation Excercise Site Playwright Tests
 on:
   # push:
   #   branches: [ main, master ]
@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '15 18 * 1-12 1-5' # Runs daily at 18:15 UTC
 jobs:
-  test:
+  Regression:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
