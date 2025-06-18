@@ -7,17 +7,17 @@ exports.ContactUsPage = class ContactUsPage {
 
         this.page = page;
 
-        this.contactUsHeader_label=page.locator("//h2[contains(.,'Contact Us')]");
-        this.getInTouchHeader_label=page.locator("//h2[.='Get In Touch']");
-        this.feedbackForUsHeader_label=page.locator("//h2[.='Feedback For Us']");
-        this.contactFormName_textBox=page.getByPlaceholder("Name");
-        this.contactFormEmail_textBox=page.locator("//input[@placeholder='Email']");
-        this.contactFormSubject_textBox=page.getByPlaceholder("Subject");
-        this.messageFormText_textArea=page.getByRole('textbox',{name:'message'});
-        this.contactFormUploadFile_inputFile=page.locator("//input[@name='upload_file']");
-        this.contactFormSubmit_button=page.locator("//input[@name='submit']");
-        this.feedbackEmailLink_link=page.locator("//a[@href='mailto:feedback@automationexercise.com']");
-        this.contactFormElement_form=page.locator("//input[@name='submit']");
+        this.contactUsHeader_label=page.locator("//h2[contains(.,'Contact Us')]").describe('Contact Us Header Label');
+        this.getInTouchHeader_label=page.locator("//h2[.='Get In Touch']").describe('Get In Touch Header Label');
+        this.feedbackForUsHeader_label=page.locator("//h2[.='Feedback For Us']").describe('Feedback For Us Header Label');
+        this.contactFormName_textBox=page.getByPlaceholder("Name").describe('Contact Form Name Text Box');
+        this.contactFormEmail_textBox=page.locator("//input[@placeholder='Email']").describe('Contact Form Email Text Box');
+        this.contactFormSubject_textBox=page.getByPlaceholder("Subject").describe('Contact Form Subject Text Box');
+        this.messageFormText_textArea=page.getByRole('textbox',{name:'message'}).describe('Message Form Text Area');
+        this.contactFormUploadFile_inputFile=page.locator("//input[@name='upload_file']").describe('Contact Form Upload File Input');
+        this.contactFormSubmit_button=page.locator("//input[@name='submit']").describe('Contact Form Submit Button');
+        this.feedbackEmailLink_link=page.locator("//a[@href='mailto:feedback@automationexercise.com']").describe('Feedback Email Link');
+        this.contactFormElement_form=page.locator("//input[@name='submit']").describe('Contact Form Element Form');
 
     }
 

@@ -8,25 +8,25 @@ exports.AccountInformationPage = class AccountInformationPage {
 
         this.page = page;
 
-        this.title_radioButton = page.getByRole('radio', { name: 'Mr.' });
-        this.passwordSignUp_textBox = page.locator("//input[@id='password']");
-        this.dobDay_dropdown = page.locator('#days');
-        this.dobMonth_dropdown = page.locator('#months');
-        this.dobYear_dropdown = page.locator('#years');
-        this.newsletterSubscribe_checkBox = page.getByLabel('newsletter');
-        this.receiveSpecialOffer_checkbox = page.locator('#optin');
-        this.firstName_textBox = page.locator("//input[@id='first_name']");
-        this.lastName_textBox = page.locator("//input[@id='last_name']");
-        this.companyName_textBox = page.locator("//input[@id='company']");
-        this.addrLine1_textBox = page.locator("//input[@id='address1']");
-        this.addrLine2_textBox = page.locator("//input[@id='address2']");
-        this.addrState_textBox = page.locator("//input[@id='state']");
-        this.addrCity_textBox = page.locator("//input[@id='city']");
-        this.addrZipcode_textBox = page.locator("//input[@id='zipcode']");
-        this.userMobile_textBox = page.locator("//input[@id='mobile_number']");
-        this.createAccount_button = page.locator('button:has-text("Create Account")');
-        this.createSuccessMessage_textLabel=page.locator("//b[normalize-space()='Account Created!']");
-        this.createUserContinue_button=page.locator("//a[normalize-space()='Continue']");
+        this.title_radioButton = page.getByRole('radio', { name: 'Mr.' }).describe('Title radio button');
+        this.passwordSignUp_textBox = page.locator("//input[@id='password']").describe('Password input field');
+        this.dobDay_dropdown = page.locator('#days').describe('Date of Birth Day dropdown');
+        this.dobMonth_dropdown = page.locator('#months').describe('Date of Birth Month dropdown');
+        this.dobYear_dropdown = page.locator('#years').describe('Date of Birth Year dropdown');
+        this.newsletterSubscribe_checkBox = page.getByLabel('newsletter').describe('Newsletter subscription checkbox');
+        this.receiveSpecialOffer_checkbox = page.locator('#optin').describe('Receive special offers checkbox');
+        this.firstName_textBox = page.locator("//input[@id='first_name']").describe('First Name input field');
+        this.lastName_textBox = page.locator("//input[@id='last_name']").describe('Last Name input field');
+        this.companyName_textBox = page.locator("//input[@id='company']").describe('Company Name input field');
+        this.addrLine1_textBox = page.locator("//input[@id='address1']").describe('Address Line 1 input field');
+        this.addrLine2_textBox = page.locator("//input[@id='address2']").describe('Address Line 2 input field');
+        this.addrState_textBox = page.locator("//input[@id='state']").describe('State input field');
+        this.addrCity_textBox = page.locator("//input[@id='city']").describe('City input field');
+        this.addrZipcode_textBox = page.locator("//input[@id='zipcode']").describe('Zipcode input field');
+        this.userMobile_textBox = page.locator("//input[@id='mobile_number']").describe('Mobile Number input field');
+        this.createAccount_button = page.locator('button:has-text("Create Account")').describe('Create Account button');
+        this.createSuccessMessage_textLabel=page.locator("//b[normalize-space()='Account Created!']").describe('Account Created success message');
+        this.createUserContinue_button=page.locator("//a[normalize-space()='Continue']").describe('Continue button');
 
 
     }

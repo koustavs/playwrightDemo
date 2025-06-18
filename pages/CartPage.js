@@ -6,14 +6,14 @@ exports.CartPage = class CartPage {
 
         this.page = page;
 
-        this.proceedToCheckout_link = page.locator("//a[normalize-space()='Proceed To Checkout']");
-        this.itemUnitPrice = page.locator("//td[@class='cart_price']/p");
-        this.itemCartQuantity = page.locator("//td[@class='cart_quantity']/button");
-        this.itemCartTotal = page.locator("//td[@class='cart_total']/p");
-        this.removeCartItemIcon = page.locator(".cart_quantity_delete");
-        this.emptyCartText_textLabel=page.getByText("Cart is empty!");
-        this.cartPageRegisterLoginPopupHeader_header=page.locator("//h4[.='Checkout']");
-        this.cartPageRegisterLoginLink_link=page.locator("//a[.='Register / Login']");
+        this.proceedToCheckout_link = page.locator("//a[normalize-space()='Proceed To Checkout']").describe('Proceed To Checkout link');
+        this.itemUnitPrice = page.locator("//td[@class='cart_price']/p").describe('Item Unit Price');
+        this.itemCartQuantity = page.locator("//td[@class='cart_quantity']/button").describe('Item Cart Quantity');
+        this.itemCartTotal = page.locator("//td[@class='cart_total']/p").describe('Item Cart Total');
+        this.removeCartItemIcon = page.locator(".cart_quantity_delete").describe('Remove Cart Item Icon');
+        this.emptyCartText_textLabel=page.getByText("Cart is empty!").describe('Empty Cart Text Label');
+        this.cartPageRegisterLoginPopupHeader_header=page.locator("//h4[.='Checkout']").describe('Cart Page Register Login Popup Header');
+        this.cartPageRegisterLoginLink_link=page.locator("//a[.='Register / Login']").describe('Cart Page Register Login Link');
 
     }
 

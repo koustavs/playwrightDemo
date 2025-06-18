@@ -9,7 +9,7 @@ let invoiceTotalFromCheckout = 0;
 let invoiceTotalFromFile = 0;
 
 
-test.describe('Account Operations', () => {
+test.describe.only('Account Operations', () => {
     test('Test - Verify New User Registration', { tag: ['@Regression', '@WebApp'] }, async ({ page }, testInfo) => {
         // setupPageCrashListener(page);
         const PgObjManager = new PageObjectManager(page);

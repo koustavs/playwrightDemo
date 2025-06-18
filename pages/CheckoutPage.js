@@ -7,14 +7,14 @@ exports.CheckoutPage = class CheckoutPage {
 
         this.page = page;
 
-        this.addressDetailsHeader_textLabel = page.getByText("Address Details");
-        this.deliveryAddressDetailsHeader_textLabel = page.getByText("Your delivery address");
-        this.billingAddressDetailsHeader_textLabel = page.getByText("Your billing address");
-        this.reviewOrderHeader_textLabel = page.getByText("Review Your Order");
-        this.orderCommentText_textBox = page.locator('textarea[name="message"]');
-        this.cartTotalAmountBold_textLabel = page.locator("//h4[.='Total Amount']");
-        this.placeOrder_button = page.locator("//a[.='Place Order']");
-        this.cartTotalAmountNumeric_textLabel = page.locator("//h4[.='Total Amount']/parent::td/following-sibling::td");
+        this.addressDetailsHeader_textLabel = page.getByText("Address Details").describe('Address Details Header');
+        this.deliveryAddressDetailsHeader_textLabel = page.getByText("Your delivery address").describe('Delivery Address Details Header');
+        this.billingAddressDetailsHeader_textLabel = page.getByText("Your billing address").describe('Billing Address Details Header');
+        this.reviewOrderHeader_textLabel = page.getByText("Review Your Order").describe('Review Order Header');
+        this.orderCommentText_textBox = page.locator('textarea[name="message"]').describe('Order Comment Text Box');
+        this.cartTotalAmountBold_textLabel = page.locator("//h4[.='Total Amount']").describe('Cart Total Amount Bold Text Label');
+        this.placeOrder_button = page.locator("//a[.='Place Order']").describe('Place Order button');
+        this.cartTotalAmountNumeric_textLabel = page.locator("//h4[.='Total Amount']/parent::td/following-sibling::td").describe('Cart Total Amount Numeric Text Label');
 
 
     }
