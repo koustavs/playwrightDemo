@@ -1,0 +1,11 @@
+name: Run EXE on Local Runner
+
+on: [workflow_dispatch]  
+
+jobs:
+  run-exe:
+    runs-on: self-hosted
+    steps:
+      - name: Open Notepad
+        run: start notepad.exe
+        shell: cmd

@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "smoke": "playwright test --grep \"@Smoke\"",
-    "regression": "playwright test --grep \"@Regression\""
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:all": "npx playwright test",
+    "test:smoke": "playwright test --grep \"@Smoke\"",
+    "test:regression": "playwright test --grep \"@Regression\""
   },
   "keywords": [],
   "author": "",
