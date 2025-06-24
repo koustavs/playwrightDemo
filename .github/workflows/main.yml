@@ -4,8 +4,14 @@ on: [workflow_dispatch]
 
 jobs:
   run-exe:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
-      - name: Open Notepad
-        run: start notepad.exe
-        shell: cmd
+      - name: Find Google Chrome Path
+        shell: pwsh
+        run: |
+          $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+          if (Test-Path $chromePath) {
+            Write-Output "Google Chrome found at: $chromePath"
+          } else {
+            Write-Output "Google Chrome not found."
+          }
